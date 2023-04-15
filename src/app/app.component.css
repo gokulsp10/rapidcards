@@ -1,0 +1,117 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .nav-link {
+    color: #007bff !important;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #6c757d !important;
+    text-decoration: none;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .form-control {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1em;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .list-group-item:hover {
+    background-color: #dee2e6;
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .due {
+    font-size: 0.8em;
+    margin-left: 10px;
+    color: #6c757d;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+  }
+  
+  .list-group-item.bg-danger {
+    color: white;
+  }
+  
+  .list-group-item.bg-danger .name {
+    text-decoration: line-through;
+  }
+  
+  .list-group-item.bg-danger .due {
+    text-decoration: line-through;
+  }
+  
+  .list-group-item.bg-danger .btn-danger {
+    display: none;
+  }
+  .list-group-item.expired {
+    background-color: #ffcccc !important;
+  }
+
+  .expired {
+    background-color: #ffcccc;
+  }
+  

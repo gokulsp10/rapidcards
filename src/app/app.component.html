@@ -1,1 +1,49 @@
-<div>Hello world geke</div>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" (click)="showAddTask()">Add Task</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showViewTask()">View Task</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="showDeleteTask()">Delete Task</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div *ngIf="addTaskVisible">
+      <div class="form-group">
+        <label for="taskInput">Task:</label>
+        <input type="text" id="taskInput" class="form-control" [(ngModel)]="name" />
+      </div>
+      <div class="form-group">
+        <label for="reminderInput">Reminder:</label>
+        <input type="datetime-local" id="reminderInput" class="form-control" [(ngModel)]="reminder" />
+      </div>
+      <button class="btn btn-primary" (click)="addTask()">Add Task</button>
+    </div>
+  
+    <div *ngIf="viewTaskVisible">
+      <ul id="taskList" class="list-group">
+        <li *ngFor="let task of tasks; let i = index" class="list-group-item" [attr.data-index]="i"
+          [class.expired]="task.isExpired">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="name">{{ task.name }}</span>
+              <span class="due">(Due: {{ task.reminder | date:'short' }})</span>
+            </div>
+            <button class="btn btn-danger btn-sm" (click)="deleteTask(i)">Delete</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  
+    <div *ngIf="deleteTaskVisible">
+      <p>Are you sure you want to delete all tasks?</p>
+      <button class="btn btn-danger" (click)="deleteAllTasks()">Delete All Tasks</button>
+    </div>
+  
+  </div>
+  
